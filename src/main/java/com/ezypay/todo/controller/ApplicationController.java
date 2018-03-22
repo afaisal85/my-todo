@@ -1,0 +1,17 @@
+package com.ezypay.todo.controller;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+@Slf4j
+public class ApplicationController {
+    private static final String MAIN_VIEW = "index";
+
+    @GetMapping("/")
+    public String index(Model model) {
+        return MAIN_VIEW;
+    }
+}
